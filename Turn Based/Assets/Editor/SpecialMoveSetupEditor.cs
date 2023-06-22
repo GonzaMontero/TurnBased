@@ -34,7 +34,7 @@ public class SpecialMoveSetupEditor : Editor
     #region Editor Methods
     private void OnEnable()
     {
-        element = serializedObject.FindProperty("public");
+        element = serializedObject.FindProperty("element");
 
         moveName = serializedObject.FindProperty("moveName");
 

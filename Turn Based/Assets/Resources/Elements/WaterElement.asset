@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66dc2de734ec2af499bae52104e560e5, type: 3}
-  m_Name: FireElement
+  m_Name: WaterElement
   m_EditorClassIdentifier: 
-  elementName: Fire
-  elementStrongAgainst: []
+  elementName: Water
+  elementStrongAgainst:
+  - {fileID: 11400000, guid: 6eb4c5107923b934b8b864df2e977e30, type: 2}
   elementWeakAgainst:
-  - {fileID: 11400000, guid: 0c7a469900277424c828f2675988846d, type: 2}
-  statusToInflict: {fileID: 11400000, guid: e9b2e792a2504de40986fed4f7f81ecd, type: 2}
+  - {fileID: 0}
+  statusToInflict: {fileID: 11400000, guid: 7200b56749623e846900d5613ef7bc82, type: 2}
   chancesToInflict: 45

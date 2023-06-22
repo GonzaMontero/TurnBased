@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: FireBallMove
   m_EditorClassIdentifier: 
   moveName: Fire Ball
-  moveDamage: 10
-  moveAccuracy: 100
-  moveCost: 1
-  moveHasSecondaryEffects: 1
+  moveDamage: 110
+  moveAccuracy: 85
+  element: {fileID: 11400000, guid: 6eb4c5107923b934b8b864df2e977e30, type: 2}
+  moveHasSecondaryEffects: 0
   moveHasRecoil: 0
   moveRecoilPercentage: 0
-  moveLowersPlayerStat: 1
-  statToLowerPlayer: 01000000
-  stagesToReducePlayerStat: 1
+  moveLowersPlayerStat: 0
+  statToLowerPlayer: 
+  stagesToReducePlayerStat: 0
   moveLowersEnemyStat: 0
   statToLowerEnemy: 
   stagesToReduceEnemyStat: 0
