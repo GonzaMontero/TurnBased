@@ -15,12 +15,11 @@ MonoBehaviour:
   moveName: Tackle
   moveDamage: 10
   moveAccuracy: 95
-  moveCost: 1
   moveHasSecondaryEffects: 0
   moveHasRecoil: 0
   moveRecoilPercentage: 0
   moveLowersPlayerStat: 0
-  statToLowerPlayer: 
+  statToLowerPlayer: 00000000
   stagesToReducePlayerStat: 0
   moveLowersEnemyStat: 0
   statToLowerEnemy: 

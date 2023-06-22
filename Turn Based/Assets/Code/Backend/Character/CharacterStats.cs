@@ -7,11 +7,7 @@ public class CharacterStats : MonoBehaviour
     //  public CharacterScriptable characterScriptable;
     public static event Action OnDeath;
 
-    public enum Elements
-    {
-        Fire, Water, Grass
-    }
-    public Elements element;
+    public ElementScriptable element;
 
     public enum StatTypes
     {
