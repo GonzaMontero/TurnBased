@@ -6,7 +6,7 @@ public class CharacterStats : MonoBehaviour
 {
     //  public CharacterScriptable characterScriptable;
     public static event Action OnDeath;
-
+    
     public ElementScriptable element;
 
     public enum StatTypes
