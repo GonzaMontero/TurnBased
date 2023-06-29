@@ -1,6 +1,6 @@
 using UnityEngine;
 using System;
-using System.Collections;
+using System.Collections.Generic;
 
 public class CharacterStats : MonoBehaviour
 {
@@ -13,12 +13,17 @@ public class CharacterStats : MonoBehaviour
     {
         Attack, Special_Attack, Defense, Special_Defense, Speed
     }
+
+    private float characterDefense;
+    private float characterSpecialDefense;
+    private float characterSpeed;
+
+    public int characterHealth;
     public float characterAttack;
     public float characterSpecialAttack;
-    public float characterDefense;
-    public float characterSpecialDefense;
-    public float characterSpeed;
-    public int characterHealth;
+
+    public const int MOVELIMITCOUNT = 4;
+    public List<BaseMoveScriptable> moves = new List<BaseMoveScriptable>();
 
     #region Setup and Load
     private void LoadDataFromScriptable()

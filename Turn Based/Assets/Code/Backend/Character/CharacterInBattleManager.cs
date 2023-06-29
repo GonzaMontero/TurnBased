@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class CharacterInBattleManager : MonoBehaviourSingleton<CharacterInBattleManager>
 {
+    public CharacterStats playerStats;
+    public CharacterStats enemyStats;
+
     public void UsePhysicalMove(PhysicalMoveScriptable moveUsed, CharacterStats target, CharacterStats user)
     {
         int attackAccuracy = Random.Range(1, 100);
