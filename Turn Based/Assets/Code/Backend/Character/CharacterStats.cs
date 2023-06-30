@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class CharacterStats : MonoBehaviour
 {
-    //  public CharacterScriptable characterScriptable;
+    public CharacterScriptable characterScriptable;
     public static event Action OnDeath;
     
     public ElementScriptable element;
@@ -14,21 +14,31 @@ public class CharacterStats : MonoBehaviour
         Attack, Special_Attack, Defense, Special_Defense, Speed
     }
 
+    public int characterHealth;
+    public float characterAttack;
+    public float characterSpecialAttack;
     private float characterDefense;
     private float characterSpecialDefense;
     private float characterSpeed;
 
-    public int characterHealth;
-    public float characterAttack;
-    public float characterSpecialAttack;
-
-    public const int MOVELIMITCOUNT = 4;
     public List<BaseMoveScriptable> moves = new List<BaseMoveScriptable>();
 
     #region Setup and Load
+    private void Start()
+    {
+        LoadDataFromScriptable();
+    }
+
     private void LoadDataFromScriptable()
     {
+        moves = characterScriptable.characterMoves;
 
+        characterHealth = characterScriptable.characterHealth;
+        characterAttack = characterScriptable.characterAttack;
+        characterSpecialAttack = characterScriptable.characterSpecialAttack;
+        characterDefense = characterScriptable.characterDefense;
+        characterSpecialDefense = characterScriptable.characterSpecialDefense;
+        characterSpeed = characterScriptable.characterHealth;
     }
     #endregion
 

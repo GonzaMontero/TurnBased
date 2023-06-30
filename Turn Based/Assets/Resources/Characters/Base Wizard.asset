@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598c43b971a00b246b3242f413f7a3d5, type: 3}
+  m_Name: Base Wizard
+  m_EditorClassIdentifier: 
+  characterHealth: 100
+  characterAttack: 10
+  characterSpecialAttack: 10
+  characterDefense: 10
+  characterSpecialDefense: 10
+  characterSpeed: 10
+  characterMoves:
+  - {fileID: 11400000, guid: db9ed58ea657fe24b945e456ce1ba84d, type: 2}
+  - {fileID: 11400000, guid: e4ec56ee01d869243b36d9bd107714f5, type: 2}
+  - {fileID: 11400000, guid: 86dd0b5028a2f774c9b500bac58ae60f, type: 2}
+  - {fileID: 11400000, guid: 935f2c876cdd91b4dbdafc4add190748, type: 2}
