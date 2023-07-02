@@ -10,13 +10,23 @@ public class AutomaticTextLocalizer : MonoBehaviour
 
     public string key;
     
-    void Start()
+    private void Start()
     {
         textField = GetComponent<TextMeshProUGUI>();
 
         string s = Loc.ReplaceKey(key); 
 
         textField.text = s;
+
+        CommandManager.Get().OnSettingsChanged.AddListener(
+            () => textField.text = Loc.ReplaceKey(key)
+            );
     }
 
+    private void OnDestroy()
+    {
+        CommandManager.Get().OnSettingsChanged.RemoveListener(
+            () => textField.text = Loc.ReplaceKey(key)
+            );
+    }
 }
