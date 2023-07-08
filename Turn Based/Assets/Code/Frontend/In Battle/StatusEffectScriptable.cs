@@ -6,7 +6,7 @@ public class StatusEffectScriptable : ScriptableObject
     public string statusName;
 
     public bool statusLowersStat;
-    public CharacterStats.StatTypes statToLower;
+    public IngameCharacterManager.StatTypes statToLower;
     [Range(1, 6)]
     public int stagesToLower;
 

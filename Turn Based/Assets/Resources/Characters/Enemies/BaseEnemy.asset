@@ -12,23 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46835c1aec903ad4090e20291381c553, type: 3}
   m_Name: BaseEnemy
   m_EditorClassIdentifier: 
-  characterHealth: 0
-  characterAttack: 0
-  characterSpecialAttack: 0
-  characterDefense: 0
-  characterSpecialDefense: 0
-  characterSpeed: 0
+  characterHealth: 10
+  characterAttack: 10
+  characterSpecialAttack: 10
+  characterDefense: 10
+  characterSpecialDefense: 10
+  characterSpeed: 10
   enemyMoves:
   - move: {fileID: 11400000, guid: e4ec56ee01d869243b36d9bd107714f5, type: 2}
-    behaviorForMove: 00000000
-    percentage:
-    - 30
-  - move: {fileID: 0}
-    behaviorForMove: 
-    percentage: []
-  - move: {fileID: 0}
-    behaviorForMove: 
-    percentage: []
-  - move: {fileID: 0}
-    behaviorForMove: 
-    percentage: []
+    moveSetups:
+    - moveBehavior: 1
+      percentage: 30
