@@ -35,6 +35,9 @@ public class PlayerMoveSetup : MonoBehaviour
                 {
                     Debug.Log("Move in slot " + i + " is not of allowed Types");
                 }
+
+                movePrototype.tooltipTrigger.headerKey = "aaaaaaaaaaaaaa";
+                movePrototype.tooltipTrigger.contentKey = "bbbbbbbbbbbbbb";
             }
             else
             {
