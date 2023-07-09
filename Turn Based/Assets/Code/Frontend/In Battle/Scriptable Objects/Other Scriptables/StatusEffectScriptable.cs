@@ -1,9 +1,9 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Element", menuName = "ScriptableObjects/Status Effect")]
+[CreateAssetMenu(fileName = "Element", menuName = "ScriptableObjects/Others/Status Effect")]
 public class StatusEffectScriptable : ScriptableObject
 {
-    public string statusName;
+    public string statusKey;
 
     public bool statusLowersStat;
     public IngameCharacterManager.StatTypes statToLower;

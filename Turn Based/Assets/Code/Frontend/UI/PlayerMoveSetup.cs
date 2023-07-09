@@ -16,7 +16,7 @@ public class PlayerMoveSetup : MonoBehaviour
             if (instance.playerStats.moves[i] != null)
             {
                 var movePrototype = Instantiate(prototype, attackButtonContainer);
-                movePrototype.moveNameText.text = instance.playerStats.moves[i].moveName;
+                movePrototype.moveNameText.text = Loc.ReplaceKey(instance.playerStats.moves[i].moveKey);
 
                 if (instance.playerStats.moves[i] is SpecialMoveScriptable) {
                     movePrototype.activationButton.onClick.AddListener(() =>

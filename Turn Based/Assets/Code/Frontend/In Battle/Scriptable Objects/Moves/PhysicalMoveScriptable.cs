@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Move", menuName = "ScriptableObjects/PhysicalMove")]
+[CreateAssetMenu(fileName = "Special Move", menuName = "ScriptableObjects/Moves/PhysicalMove")]
 public class PhysicalMoveScriptable : BaseMoveScriptable
 {
     public bool moveHasSecondaryEffects;

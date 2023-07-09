@@ -1,9 +1,9 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Move", menuName = "ScriptableObjects/BaseMove")]
+[CreateAssetMenu(fileName = "Move", menuName = "ScriptableObjects/Moves/BaseMove")]
 public class BaseMoveScriptable : ScriptableObject
 {
-    public string moveName;
+    public string moveKey;
 
     public float moveDamage;
     [Range(0,100)]

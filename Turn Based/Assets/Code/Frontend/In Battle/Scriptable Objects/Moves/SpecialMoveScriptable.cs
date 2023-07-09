@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Move", menuName = "ScriptableObjects/SpecialMove")]
+[CreateAssetMenu(fileName = "Special Move", menuName = "ScriptableObjects/Moves/SpecialMove")]
 public class SpecialMoveScriptable : BaseMoveScriptable
 {
     public ElementScriptable element;
