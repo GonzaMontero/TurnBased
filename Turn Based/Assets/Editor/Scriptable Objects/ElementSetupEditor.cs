@@ -5,7 +5,7 @@ public class ElementSetupEditor : Editor
 {
     #region SerializedProperties
 
-    SerializedProperty elementName;
+    SerializedProperty elementKey;
 
     SerializedProperty elementStrongAgainst;
     SerializedProperty elementWeakAgainst;
@@ -19,7 +19,7 @@ public class ElementSetupEditor : Editor
     #region Editor Methods
     private void OnEnable()
     {
-        elementName = serializedObject.FindProperty("elementName");
+        elementKey = serializedObject.FindProperty("elementKey");
 
         elementStrongAgainst = serializedObject.FindProperty("elementStrongAgainst");
         elementWeakAgainst = serializedObject.FindProperty("elementWeakAgainst");
@@ -39,7 +39,7 @@ public class ElementSetupEditor : Editor
 
     private void UpdateValues()
     {
-        EditorGUILayout.PropertyField(elementName);
+        EditorGUILayout.PropertyField(elementKey);
 
         EditorGUILayout.PropertyField(elementStrongAgainst);
         EditorGUILayout.PropertyField(elementWeakAgainst);

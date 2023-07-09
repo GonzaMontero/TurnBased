@@ -7,7 +7,7 @@ public class SpecialMoveSetupEditor : Editor
 
     SerializedProperty element;
 
-    SerializedProperty moveName;
+    SerializedProperty moveKey;
 
     SerializedProperty moveDamage;
     SerializedProperty moveAccuracy;
@@ -36,7 +36,7 @@ public class SpecialMoveSetupEditor : Editor
     {
         element = serializedObject.FindProperty("element");
 
-        moveName = serializedObject.FindProperty("moveName");
+        moveKey = serializedObject.FindProperty("moveKey");
 
         moveDamage = serializedObject.FindProperty("moveDamage");
         moveAccuracy = serializedObject.FindProperty("moveAccuracy");
@@ -73,7 +73,7 @@ public class SpecialMoveSetupEditor : Editor
         moveBaseGroup = EditorGUILayout.BeginFoldoutHeaderGroup(moveBaseGroup, "Base Move Settings");
         if (moveBaseGroup)
         {
-            EditorGUILayout.PropertyField(moveName);
+            EditorGUILayout.PropertyField(moveKey);
             EditorGUILayout.PropertyField(moveDamage);
             EditorGUILayout.PropertyField(moveAccuracy);
         }

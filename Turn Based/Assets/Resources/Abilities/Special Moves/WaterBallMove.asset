@@ -9,16 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e8355085144da14d8ecff90ba1c0d82, type: 3}
-  m_Name: FinalGambitMove
+  m_Script: {fileID: 11500000, guid: 0fe2a90186d421143b06a573bf229677, type: 3}
+  m_Name: WaterBallMove
   m_EditorClassIdentifier: 
-  moveName: Final Gambit Move
-  moveDamage: 100
-  moveAccuracy: 100
-  moveCost: 3
-  moveHasSecondaryEffects: 1
-  moveHasRecoil: 1
-  moveRecoilPercentage: 99
+  moveKey: 
+  moveDamage: 110
+  moveAccuracy: 85
+  element: {fileID: 11400000, guid: 0c7a469900277424c828f2675988846d, type: 2}
+  moveHasSecondaryEffects: 0
+  moveHasRecoil: 0
+  moveRecoilPercentage: 0
   moveLowersPlayerStat: 0
   statToLowerPlayer: 
   stagesToReducePlayerStat: 0

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66dc2de734ec2af499bae52104e560e5, type: 3}
+  m_Name: GrassElement
+  m_EditorClassIdentifier: 
+  elementKey: 
+  elementStrongAgainst:
+  - {fileID: 11400000, guid: 0c7a469900277424c828f2675988846d, type: 2}
+  elementWeakAgainst:
+  - {fileID: 11400000, guid: 6eb4c5107923b934b8b864df2e977e30, type: 2}
+  statusToInflict: {fileID: 11400000, guid: a4c469df36282cb4498702c876ec213a, type: 2}
+  chancesToInflict: 45

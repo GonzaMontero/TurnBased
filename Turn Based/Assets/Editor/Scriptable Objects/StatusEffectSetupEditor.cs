@@ -5,7 +5,7 @@ public class StatusEffectSetupEditor : Editor
 {
     #region SerializedProperties
 
-    SerializedProperty statusName;
+    SerializedProperty statusKey;
 
     SerializedProperty statusLowersStat;
     SerializedProperty statToLower;
@@ -21,7 +21,7 @@ public class StatusEffectSetupEditor : Editor
     #region Editor Methods
     private void OnEnable()
     {
-        statusName = serializedObject.FindProperty("statusName");
+        statusKey = serializedObject.FindProperty("statusKey");
 
         statusLowersStat = serializedObject.FindProperty("statusLowersStat");
         statToLower = serializedObject.FindProperty("statToLower");
@@ -44,7 +44,7 @@ public class StatusEffectSetupEditor : Editor
 
     private void UpdateValues(StatusEffectScriptable _statusEffectScriptable)
     {
-        EditorGUILayout.PropertyField(statusName);
+        EditorGUILayout.PropertyField(statusKey);
 
         lowersStatGroup = EditorGUILayout.BeginFoldoutHeaderGroup(lowersStatGroup, "Stat To Lower Settings");
         if (lowersStatGroup)

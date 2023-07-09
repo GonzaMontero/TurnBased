@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fe2a90186d421143b06a573bf229677, type: 3}
   m_Name: FireBallMove
   m_EditorClassIdentifier: 
-  moveName: Fire Ball
+  moveKey: 
   moveDamage: 110
   moveAccuracy: 85
   element: {fileID: 11400000, guid: 6eb4c5107923b934b8b864df2e977e30, type: 2}
