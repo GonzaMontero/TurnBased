@@ -3,12 +3,12 @@ using UnityEngine;
 public class CharacterInBattleManager : MonoBehaviourSingleton<CharacterInBattleManager>
 {
     public IngameCharacterManager playerStats;
-    public EnemyScriptable enemyStats;
+    public EnemyInBattleManager enemyStats;
 
     private void Start()
     {
         playerStats = IngameCharacterManager.Get();
-        //enemyStats = EnemyManager.Instance.enemyScriptable;
+        enemyStats = EnemyInBattleManager.Get();
     }
 
 }

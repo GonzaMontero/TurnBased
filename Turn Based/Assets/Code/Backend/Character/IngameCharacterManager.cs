@@ -1,4 +1,3 @@
-using UnityEngine;
 using System;
 using System.Collections.Generic;
 
@@ -9,23 +8,15 @@ public class IngameCharacterManager : MonoBehaviourSingleton<IngameCharacterMana
 {
     public CharacterScriptable characterScriptable;
     public static event Action OnDeath;
-    
+
     public ElementScriptable element;
 
-    public enum StatTypes
-    {
-        Attack, Special_Attack, Defense, Special_Defense, Speed
-    }
-
-    private int characterHealth; //Value is int due to the fact that the health is only displayed in whole numbers
-
-    private float characterAttack; //Value is float due to the fact that the attack is calculated with decimal numbers
-    private float characterSpecialAttack; //Value is float due to the fact that the attack is calculated with decimal numbers
-
-    private float characterDefense; //Value is float due to the fact that the defense is calculated with decimal numbers
-    private float characterSpecialDefense; //Value is float due to the fact that the defense is calculated with decimal numbers
-
-    private float characterSpeed; //Value is float due to the fact that the speed is calculated with decimal numbers
+    public int characterHealth; //Health is handled differently from other stat Types, since it cannot be increased by stages
+    public StatData characterAttackData;
+    public StatData characterSpecialAttackData;
+    public StatData characterDefenseData;
+    public StatData characterSpecialDefenseData;
+    public StatData characterSpeedData;
 
     public List<BaseMoveScriptable> moves = new();
 
@@ -49,16 +40,42 @@ public class IngameCharacterManager : MonoBehaviourSingleton<IngameCharacterMana
         LoadDataFromScriptable();
     }
 
+    /// <summary>
+    /// This function will be called when the player is not loading a saved game
+    /// </summary>
     private void LoadDataFromScriptable()
     {
         moves = characterScriptable.characterMoves;
 
-        characterHealth = characterScriptable.characterHealth;
-        characterAttack = characterScriptable.characterAttack;
-        characterSpecialAttack = characterScriptable.characterSpecialAttack;
-        characterDefense = characterScriptable.characterDefense;
-        characterSpecialDefense = characterScriptable.characterSpecialDefense;
-        characterSpeed = characterScriptable.characterHealth;
+        characterHealth = characterScriptable.characterHealth; //Set up health
+
+        characterAttackData.statType = StatData.StatTypes.Attack; //Set up stat type
+        characterAttackData.statValue = characterScriptable.characterAttack; //Get the value from the scriptable object
+        characterAttackData.statStage = 0; //Set the stage to 0 (neither increased nor decreased)
+
+        characterSpecialAttackData.statType = StatData.StatTypes.Special_Attack; //Set up stat type
+        characterSpecialAttackData.statValue = characterScriptable.characterSpecialAttack; //Get the value from the scriptable object
+        characterSpecialAttackData.statStage = 0; //Set the stage to 0 (neither increased nor decreased)
+
+        characterDefenseData.statType = StatData.StatTypes.Defense; //Set up stat type
+        characterDefenseData.statValue = characterScriptable.characterDefense; //Get the value from the scriptable object
+        characterDefenseData.statStage = 0; //Set the stage to 0 (neither increased nor decreased)
+
+        characterSpecialDefenseData.statType = StatData.StatTypes.Special_Defense; //Set up stat type
+        characterSpecialDefenseData.statValue = characterScriptable.characterSpecialDefense; //Get the value from the scriptable object
+        characterSpecialDefenseData.statStage = 0; //Set the stage to 0 (neither increased nor decreased)
+
+        characterSpeedData.statType = StatData.StatTypes.Speed; //Set up stat type
+        characterSpeedData.statValue = characterScriptable.characterSpeed; //Get the value from the scriptable object
+        characterSpeedData.statStage = 0; //Set the stage to 0 (neither increased nor decreased)
+    }
+
+    /// <summary>
+    /// This function will be called when the player is loading a saved game
+    /// </summary>
+    private void LoadDataFromSave()
+    {
+
     }
     #endregion
 }

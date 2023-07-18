@@ -9,12 +9,12 @@ public class PhysicalMoveScriptable : BaseMoveScriptable
     public int moveRecoilPercentage;
 
     public bool moveLowersPlayerStat;
-    public IngameCharacterManager.StatTypes[] statToLowerPlayer;
+    public StatData.StatTypes[] statToLowerPlayer;
     [Range(1, 6)]
     public int stagesToReducePlayerStat;
 
     public bool moveLowersEnemyStat;
-    public IngameCharacterManager.StatTypes[] statToLowerEnemy;
+    public StatData.StatTypes[] statToLowerEnemy;
     [Range(1, 6)]
     public int stagesToReduceEnemyStat;
 }
